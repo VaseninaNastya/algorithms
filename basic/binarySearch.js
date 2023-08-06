@@ -1,7 +1,8 @@
-/* Бинарный поиск: поиск в отсортированном массиве путем многократного разбиения пополам*/
+/* поиск в отсортированном массиве путем многократного деления пополам */
+/* 0(log n) */
 
 const binarySearch = (data, target, start, end) => {
-  if (start > end) return false;
+  if (start > end || end > data.length || start > data.length) return false;
   let middleIndex = Math.floor((start + end) / 2);
   if (data[middleIndex] === target) return true;
   if (data[middleIndex] > target)
