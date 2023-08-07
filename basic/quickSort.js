@@ -4,6 +4,7 @@
 /*O(n*logn) */
 
 const quickSort = (data) => {
+  if (start > end || end > data.length || start > data.length) return false;
   if (data.length < 2) return data;
 
   let pivotIndex = Math.floor(data.length / 2);
